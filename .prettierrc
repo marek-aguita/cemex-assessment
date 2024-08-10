@@ -1,0 +1,23 @@
+{
+  "plugins": ["prettier-plugin-organize-attributes"],
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "semi": true,
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "printWidth": 140,
+  "attributeSort": "ASC",
+  "attributeGroups": [
+    "^sg",
+    "$ANGULAR_STRUCTURAL_DIRECTIVE",
+    "^id$",
+    "^class$",
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_OUTPUT",
+    "^mat-",
+    "^data-test$"
+  ]
+}

@@ -1,0 +1,12 @@
+# Add files here to ignore them from prettier formatting
+
+/dist
+/coverage
+
+# Generated files
+/.nx/cache
+documentation.json
+/apps/storybook/mockServiceWorker.js
+/tsconfig.base.json
+/package.json
+/nx.json
