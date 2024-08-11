@@ -1,0 +1,19 @@
+<div class="labels">
+  <span class="cell">Status</span>
+  <span class="cell">Order Number</span>
+  <span class="cell">Product Line</span>
+  <span class="large-cell">Product</span>
+  <span class="cell">Quantity</span>
+  <span class="cell">Date Requested</span>
+</div>
+<div class="data">
+  <span class="status cell">
+    <span class="status-indicator" [ngClass]="statusToStatusIndicatorClass[product.status]"></span>
+    {{ product.status }}
+  </span>
+  <span class="cell">{{ product.orderNumber }}</span>
+  <span class="cell">{{ product.productLine }}</span>
+  <span class="product-name large-cell">{{ product.name }}</span>
+  <span class="cell">{{ product.quantity }}</span>
+  <span class="cell">{{ product.dateRequested | date }}</span>
+</div>
