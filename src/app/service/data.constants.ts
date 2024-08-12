@@ -1,6 +1,6 @@
-import { Product } from './model/product.model';
-import { Status } from './model/status.enum';
-import { ProductLine } from './model/product-line.enum';
+import { Product } from '../model/product.model';
+import { Status } from '../model/status.enum';
+import { ProductLine } from '../model/product-line.enum';
 
 export class Data {
   static readonly products: Product[] = [

@@ -1,0 +1,36 @@
+<div class="status-filter">
+  <label id="status-filter-checkbox-group-label" for="pending-status-filter-checkbox"> Status </label>
+  <mat-checkbox id="pending-status-filter-checkbox" (ngModelChange)="updateFilter({ pending: $event })" ngModel> Pending </mat-checkbox>
+  <mat-checkbox (ngModelChange)="updateFilter({ inProgress: $event })" aria-labelledby="status-filter-checkbox-group-label" ngModel>
+    In Progress
+  </mat-checkbox>
+  <mat-checkbox (ngModelChange)="updateFilter({ completed: $event })" aria-labelledby="status-filter-checkbox-group-label" ngModel>
+    Completed
+  </mat-checkbox>
+</div>
+<mat-divider vertical></mat-divider>
+<mat-form-field appearance="outline" subscriptSizing="dynamic">
+  <mat-label>Product Line</mat-label>
+  <mat-select (ngModelChange)="updateFilter({ productLine: $event })" ngModel>
+    <mat-option>All Product Lines</mat-option>
+    @for (productLine of productLines; track productLine) {
+      <mat-option [value]="productLine">{{ productLine }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<mat-divider vertical></mat-divider>
+<mat-form-field appearance="outline" ngForm subscriptSizing="dynamic">
+  <mat-label>Enter from and to dates</mat-label>
+  <mat-date-range-input [rangePicker]="picker" ngModelGroup="dateRange">
+    <input (ngModelChange)="updateFilter({ dateRange: { start: $event } })" matStartDate name="start" ngModel placeholder="From date" />
+    <input (ngModelChange)="updateFilter({ dateRange: { end: $event } })" matEndDate name="end" ngModel placeholder="To date" />
+  </mat-date-range-input>
+  <mat-datepicker-toggle [for]="picker" matIconSuffix></mat-datepicker-toggle>
+  <mat-date-range-picker [startAt]="firstJanuary2022" #picker></mat-date-range-picker>
+</mat-form-field>
+<div class="spacer"></div>
+<mat-form-field appearance="outline" subscriptSizing="dynamic">
+  <mat-label>Order Number</mat-label>
+  <input (ngModelChange)="updateFilter({ orderNumber: $event })" matInput ngModel placeholder="Search for Order Number" />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

@@ -4,10 +4,11 @@
   align-items: center;
   padding: 40px;
   min-width: 510px;
+  gap: 15px;
 }
 
-h5 {
-  align-self: start;
+h5,
+h2 {
   color: #001c3b;
   font-weight: 500;
 }
@@ -18,9 +19,25 @@ h5 {
   gap: 8px;
 }
 
+.no-results-indicator {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
 @media (width >= 800px) {
   :host {
     margin: auto;
-    width: fit-content;
+    width: 1300px;
+  }
+
+  h5 {
+    align-self: start;
+  }
+
+  .products-view {
+    width: 100%;
   }
 }

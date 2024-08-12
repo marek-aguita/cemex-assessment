@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 500;
+}
+
+.status-filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  mat-checkbox:first-of-type {
+    grid-column-start: 1;
+  }
+}
+
+mat-divider {
+  display: none;
+}
+
+.spacer {
+  display: none;
+}
+
+@media (width >= 800px) {
+  :host {
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  mat-divider {
+    display: initial;
+    align-self: normal;
+  }
+
+  .spacer {
+    display: block;
+    flex-grow: 1;
+  }
+}

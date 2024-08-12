@@ -8,12 +8,12 @@
 </div>
 <div class="data">
   <span class="status cell">
-    <span class="status-indicator" [ngClass]="statusToStatusIndicatorClass[product.status]"></span>
-    {{ product.status }}
+    <span class="status-indicator" [ngClass]="statusToStatusIndicatorClass[product().status]"></span>
+    {{ product().status }}
   </span>
-  <span class="cell">{{ product.orderNumber }}</span>
-  <span class="cell">{{ product.productLine }}</span>
-  <span class="product-name large-cell">{{ product.name }}</span>
-  <span class="cell">{{ product.quantity }}</span>
-  <span class="cell">{{ product.dateRequested | date }}</span>
+  <span class="cell">{{ product().orderNumber }}</span>
+  <span class="cell">{{ product().productLine }}</span>
+  <span class="product-name large-cell">{{ product().name }}</span>
+  <span class="cell">{{ product().quantity }}</span>
+  <span class="cell">{{ product().dateRequested | date: 'd.MM.YYYY' }}</span>
 </div>

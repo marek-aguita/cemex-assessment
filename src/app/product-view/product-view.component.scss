@@ -66,10 +66,12 @@
   .labels {
     flex-direction: row;
     text-align: start;
+    justify-content: space-between;
   }
 
   .data {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .cell {
